@@ -1,0 +1,595 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Indian Festivals
+        </title>
+        <style>
+            *{
+                padding:0%;
+                margin:0%;
+            }
+            header{
+                background-color:black;
+                color:white;
+                text-align: center;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            nav{
+                background-color:navy;
+                padding:10px;
+                justify-content: space-around;
+                display:flex
+            }
+            nav a{
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                text-decoration: none;
+                padding:10px;
+                margin:0px;
+                gap:510x;
+            }
+            nav a:hover{
+                color:rgb(238, 14, 7);
+                background-color:rgb(242, 234, 5);
+                border-radius: 30px;
+            }
+            body>h1{
+                color:brown;
+                text-align:center;
+                padding:30px;
+            }
+           #About{
+                background-color:rgb(75, 228, 239);
+                padding:30px;
+                text-align:left;
+            }
+            #About h1{
+                color:brown;
+                font-size:35px;
+                margin-bottom:25px;
+            }
+            #About p{
+                color:black;
+                font-size:25px;
+                padding:20px;
+            }
+            #About p~p{
+                color:grey
+            }
+            .fes{
+                background-color:rgb(92, 166, 231);
+                padding:20px;
+                display:flex;
+                flex-wrap:wrap;
+                text-align:center;
+                justify-content: center;
+            }
+            .festival{
+                background-color: aliceblue;
+                width:25%;
+                height:auto;
+                border:2px solid black;
+                border-radius:30px;
+                padding:10px;
+                margin:20px; 
+            }
+            .fes #Diwali{
+                background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20240930/pngtree-happy-diwali-festival-with-diya-oil-lamp-and-floral-mandala-on-image_16291370.jpg);
+                background-size: cover;
+            }
+            .fes #Ramzan{
+                background-image: url(https://png.pngtree.com/background/20250117/original/pngtree-ramadan-kareem-eid-mubarak-muslim-festival-of-ramzan-watercolor-islamic-concept-picture-image_15486419.jpg);
+                background-size: cover;
+            }
+            .fes #Christmas{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQakIEGkF17gJLUzgqWV-Pu37Un7C6FatQglHNapdK0A8kI36mvS1hDB2g&s=10);
+                background-size: cover;
+            }
+            .fes #Holi{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiY39YgryqDQvEwX3Z01EXKJchL6SCkWwtLBxVhuc8S22b-91z-_MwIA8&s=10);
+                background-size: cover;
+            }
+            .fes #Dussehra{
+                background-image: url(https://t3.ftcdn.net/jpg/21/13/94/04/360_F_2113940408_vzPR8755F76cPhY134RItBAwI0CH9nJd.jpg);
+                background-size: cover;
+            }
+            .fes #Ganesh{
+                background-image: url(https://img.magnific.com/premium-photo/lord-ganesha-indian-ganesh-festival_130568-92.jpg?semt=ais_hybrid&w=740&q=80);
+                background-size:cover;
+            }
+            .fes #Pongal{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAv0F3o5ILCf9Zsk53M91uwkh3jlrfb8C6NtOeyY3sS05DLoB69mSlVZlY&s=10);
+                background-size: cover;
+            }
+            .fes #Onam{
+                background-image: url(https://thumbs.dreamstime.com/b/colorful-arrangement-fresh-flowers-green-leaves-textured-background-onam-india-vertical-banner-copy-space-free-386166238.jpg);
+                background-size: cover;
+            }
+            .fes #Sankranti{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-m1qMu2UM-c6qxUHyQizEBhzFPDsG75s6z4StEhupCdOo34sjww9gC3g&s=10);
+                background-size: cover;
+            }
+            .fes #MahaShivaratri{
+                background-image: url(https://www.shutterstock.com/shutterstock/videos/1060490077/thumb/1.jpg?ip=x480);
+                background-size: cover;
+            }
+            .fes #Navratri{
+                background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyX78y8Jq4iQqOCFMbZBvDJDIIzh4RB0SH6RXFU240ZoGyw4rh-8oExur8&s=10);
+                background-size: cover;
+            }
+            .fes #Eidal-Adha{
+                background-image:url(https://png.pngtree.com/background/20250501/original/pngtree-eid-al-adha-mubarak-wishes-with-mosque-and-goat-silhouette-picture-image_16486950.jpg);
+                background-size:cover;
+            }
+            .fes #Baisakhi{
+                background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4V4Kn6qfJaIXBpeljJgB2ubmCqSSD2Ejwa7Z9hQQSKkVNxoAf1udI-xM&s=10);
+                background-size:cover;
+            }
+            .fes #GuruNanakGurpurab{
+                background-image:url(https://t4.ftcdn.net/jpg/17/67/35/39/360_F_1767353961_GJU6yVBoMSc5LGAxLLGgZ4139MhXjfAT.jpg);
+                background-size:cover;
+            }
+            .fes #DurgaPuja{
+                background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QXGa0M5fQKr5W5WN1zmV-F1iT5orgfOmXQXEBPXSc1Pi-Avfcy-DQLwU&s=10);
+                background-size:cover;
+            }
+            .festival h3{
+                color:Orange;
+                font-size: 30px;
+                font-weight:bold;
+            }
+            .festival h5{
+                color:rgb(205, 190, 182);
+                font-size: 30px;
+                font-weight:bold;
+                text-align: left;
+            }
+            .festival p{
+                color:rgb(68, 235, 13);
+                text-align: left;
+            }
+            .fes .festival a button{
+                background-color:orange;
+                padding:20px;
+                margin:20px;
+                border:2px solid black;
+                border-radius:30px;
+                text-decoration: none;
+            }
+            #ST{
+                background-color: aqua;
+                padding:30px;
+            }
+            #ST h1{
+                font-size: 40px;
+                font-weight: bold;
+                text-align:center;
+                margin:30px;
+            }
+            #ST table{
+                background-color:white;
+                text-align:center;
+                border-collapse: collapse;
+                width:100%;
+                height:300px;    
+            }
+            #ST table th{
+                background-color: aquamarine;
+                font-size:larger;
+                font-weight: bold;
+            }
+            #ST table tr{
+                background-color:blanchedalmond;
+                height:40px
+            }
+            #Gallery{
+                background-color:rgb(133,183,228);
+                padding:40px;
+            text-align:center;
+            }
+            #Gallery h1{
+                color:brown;
+                font-size:35px;
+                margin-bottom:30px;
+            }
+            .gallery{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content:center;
+                gap:25px;
+            }
+            .gallery img{
+                width:280px;
+                height:200px;
+                object-fit:cover;
+                border:3px solid black;
+                border-radius:20px;
+            }
+            #AA{
+                background-color:rgb(133,183,228);
+                padding:40px;
+            }
+
+            #AA h1{
+                color:brown;
+                font-size:35px;
+                margin-bottom:20px;
+            }
+
+            #AA p{
+                color:black;
+                font-size:18px;
+                margin-bottom:20px;
+            }
+
+            #AA address{
+                background-color:aliceblue;
+                padding:20px;
+                border:2px solid black;
+                border-radius:15px;
+                width:70%;
+                font-size:18px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><marquee >Indian Festivals</marquee></h1>
+        </header>
+        <nav>
+            <a href="#About">About</a>
+            <a href="#MF">Major Festivals</a>
+            <a href="#ST">Schedule Table</a>
+            <a href="#Gallery">Gallery</a>                
+            <a href="#AA"> About Aurthur</a>
+        </nav>
+        <div id="About">
+            <h1>Cultural Significance</h1>
+            <p>India is celebrated globally as the land of festivals. Every celebration represents <mark>harmony, joy, and unity </mark>across diverse
+                communities.From lighting oil lamps to smearing vibrant colors, every occasion holds ancient spiritual and social value.
+            </p>
+            <p>
+                Festivals are sweet reminders of our heritage, connecting communities through light, warmth, and shared happiness."
+            </p>
+        </div>
+        <div class="fes" id="MF">
+            <section class="festival" id="Diwali">
+                <h3>Diwali</h3>
+                <h5>Purpose</h5>
+                <p>Diwali celebrates the victory of light over darkness, good over evil, and knowledge over ignorance.</p>
+                <a href="Diwali.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Ramzan">
+                <h3>Ramzan</h3>
+                <h5>Purpose</h5>
+                <p>To practice fasting, self-discipline, prayer, charity, gratitude, and strengthen one's faith and devotion to Allah.</p>
+                <a href="Ramzan.html" target="_blank">
+                    <button >
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Christmas">
+                <h3>Christmas</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates the birth of Jesus Christ and promotes love, peace, kindness, hope, and generosity.</p>
+                <a href="christmas.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Holi">
+                <h3>Holi</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates love, friendship, unity, and the arrival of spring through vibrant colors and joyful gatherings.</p>
+                <a href="holi.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Dussehra">
+                <h3>Dussehra</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates the victory of good over evil, symbolizing Lord Rama's triumph over Ravana.</p>
+                <a href="dussehra.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Ganesh">
+                <h3>Ganesh Chaturthi</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates Lord Ganesha's birth and seeks wisdom, prosperity, success, and removal of obstacles.</p>
+                <a href="ganesh-chaturthi.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="Pongal">
+                <h3>Pongal</h3>
+                <h5>Purpose</h5>
+                <p>Expresses gratitude to the Sun, nature, cattle, and farmers for a successful agricultural harvest.</p>
+                <a href="pongal.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Onam">
+                <h3>Onam</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates Kerala's harvest season, prosperity, cultural traditions, and the legendary return of King Mahabali.</p>
+                <a href="onam.html" target="_blank">
+                    <button>
+                        Explore
+                    </button>
+                </a>
+            </section>
+
+            <section class="festival" id="Sankranti">
+                <h3>Makar Sankranti</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates the Sun's transition into Capricorn, marking harvest, prosperity, longer days, and new beginnings.</p>
+                <a href="sankranti.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="MahaShivaratri">
+                <h3>Maha Shivaratri</h3>
+                <h5>Purpose</h5>
+                <p>Dedicated to Lord Shiva and observed as a day of devotion and spiritual reflection.</p>
+                <a href="maha-shivaratri.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="Navratri">
+                <h3>Navratri</h3>
+                <h5>Purpose</h5>
+                <p>Honors Goddess Durga and celebrates the triumph of good over evil.</p>
+                <a href="navaratri.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="Eidal-Adha">
+                <h3>Eid al-Adha</h3>
+                <h5>Purpose</h5>
+                <p>Commemorates Prophet Ibrahim's devotion and emphasizes sacrifice, charity, and faith.</p>
+                <a href="eid-al-adha.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="Baisakhi">
+                <h3>Baisakhi</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates the harvest and holds special significance in Sikh history and tradition.</p>
+                <a href="baisakhi.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="GuruNanakGurpurab">
+                <h3>Guru Nanak Gurpurab</h3>
+                <h5>Purpose</h5>
+                <p>Commemorates the birth of Guru Nanak and promotes equality, service, and devotion.</p>
+                <a href="guru-nanak-gurpurab.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+            <section class="festival" id="DurgaPuja">
+                <h3>Durga Puja</h3>
+                <h5>Purpose</h5>
+                <p>Celebrates Goddess Durga's victory over the demon Mahishasura, symbolizing good over evil.</p>
+                <a href="durga-puja.html" target="_blank">
+                    <button>Explore</button>
+                </a>
+            </section>
+
+        </div>
+        <div id="ST">
+            <h1>Schedule Table</h1>
+            <table align="center" border="2px solid black">
+                <tr>
+                    <th>Festival</th>
+                    <th>Typical Time</th>
+                    <th>Duration</th>
+                    <th>Purpose</th>
+                </tr>
+
+                <tr>
+                    <td>Diwali</td>
+                    <td>October - November</td>
+                    <td>5 Days</td>
+                    <td>Festival of Lights</td>
+                </tr>
+
+                <tr>
+                    <td>Ramzan</td>
+                    <td>February - March</td>
+                    <td>29 - 30 Days</td>
+                    <td>Fasting, Prayer and Charity</td>
+                </tr>
+
+                <tr>
+                    <td>Christmas</td>
+                    <td>December</td>
+                    <td>1 Day</td>
+                    <td>Celebrates the birth of Jesus Christ</td>
+                </tr>
+
+                 <tr>
+                    <td>Holi</td>
+                    <td>February - March</td>
+                    <td>2 Days</td>
+                    <td>Festival of Colours</td>
+                 </tr>
+                <tr>
+                    <td>Dussehra</td>
+                    <td>September - October</td>
+                    <td>10 Days</td>
+                    <td>Victory of Good over Evil</td>
+                </tr>
+                <tr>
+                    <td>Ganesh Chaturthi</td>
+                    <td>August - September</td>
+                    <td>10 Days</td>
+                    <td>Celebrates Lord Ganesha</td>
+                </tr>
+                <tr>
+                    <td>Pongal</td>
+                    <td>January</td>
+                    <td>4 Days</td>
+                    <td>Harvest Festival</td>
+                </tr>
+
+                <tr>
+                    <td>Onam</td>
+                    <td>August - September</td>
+                    <td>10 Days</td>
+                    <td>Harvest and Cultural Festival</td>
+                </tr>
+
+                <tr>
+                    <td>Makar Sankranti</td>
+                    <td>January</td>
+                    <td>1 Day</td>
+                    <td>Harvest and Sun Festival</td>
+                </tr>
+                <tr>
+                    <td>Maha Shivaratri</td>
+                    <td>February - March</td>
+                    <td>1 Day</td>
+                    <td>Devotion and spiritual reflection dedicated to Lord Shiva</td>
+                </tr>
+
+                <tr>
+                    <td>Navratri</td>
+                    <td>September - October</td>
+                    <td>9 Days</td>
+                    <td>Honors Goddess Durga and celebrates the triumph of good over evil</td>
+                </tr>
+
+                <tr>
+                    <td>Eid al-Adha</td>
+                    <td>June - July</td>
+                    <td>4 Days</td>
+                    <td>Sacrifice, charity, and faith</td>
+                </tr>
+
+                <tr>
+                    <td>Baisakhi</td>
+                    <td>April</td>
+                    <td>1 Day</td>
+                    <td>Harvest festival with special significance in Sikh tradition</td>
+                </tr>
+
+                <tr>
+                    <td>Guru Nanak Gurpurab</td>
+                    <td>November</td>
+                    <td>1 Day</td>
+                    <td>Commemorates the birth of Guru Nanak and promotes equality and devotion</td>
+                </tr>
+
+                <tr>
+                    <td>Durga Puja</td>
+                    <td>September - October</td>
+                    <td>5 Days</td>
+                    <td>Celebrates Goddess Durga's victory over evil</td>
+                </tr>
+            </table>
+        </div>
+        <div id="Gallery">
+            <h1>Festival Gallery</h1>
+            <section class="gallery">
+                 <!-- Diwali -->
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dipawali%20Celebration.jpg"
+                alt="People celebrating Diwali">
+
+                <!-- Holi -->
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photos%20of%20many%20people%20that%20celebrates%20Holi%20festival.jpg"
+                alt="People celebrating Holi">
+
+                <!-- Ganesh Chaturthi -->
+                <img src="https://i.pinimg.com/736x/f6/6c/bc/f66cbc1c020da8dffe928f4c301eba05.jpg"
+                alt="People celebrating Ganesh Chaturthi">
+
+                <!-- Dussehra -->
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dusshera.jpg"
+                alt="Dussehra celebration">
+
+                <!-- Pongal -->
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Celebration%20of%20maghe.jpg"
+                alt="Indian festival celebration">
+
+                <!-- Onam -->
+                <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80"
+                alt="Onam celebration">
+
+                <!-- Christmas -->
+                <img src="https://static-assets.business.amazon.com/assets/in/20th-dec-2022/How-to-celebrate-Christmas_1542617612_626_417_1912.jpg.transform/width-2216/image.jpg"
+                alt="Christmas celebration">
+
+                <!-- Ramadan -->
+                <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80"
+                alt="Ramadan celebration">
+
+                <!--Maha Shivaratri-->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHwVtHcrerkN6sM_FwIz68QK_EXZpXy4bxXojuR0dw-6TE3zgbrIlCngs&s=10"
+                alt="Maha Shivaratri">
+
+                <!--Navratri-->
+                <img src="https://images.livemint.com/img/2022/09/21/600x338/ASSIGNMENT-NAME-IN-BRIEF-2_1663724370016_1663724370016_1663727946829_1663727946829.jpg"
+                alt="Navratri">
+
+                <!--Eid al-Adha-->
+                <img src="https://d3lzcn6mbbadaf.cloudfront.net/media/details/dsfsfgbhnmgfgdsgnhbmgfrfgfgf___cgfb_cxxcvnb_hnfg_ftdb_ndffdvgf.jpg"
+                alt="Eid al-Adha">
+
+                <!--Baisakhi-->
+                <img src="https://static.toiimg.com/photo/63742831.cms"
+                alt="Baisakhi">
+
+                <!--Guru Nanak Gurpural-->
+                <img src="https://images.indianexpress.com/2017/11/guru-nanak-jayanti_pti003.jpg?w=350"
+                alt="Guru Nanak Gurpural">
+
+                <!--Durga Puja-->
+                <img src="https://www.surekaproperties.com/images/blog/the-essence-of-durga-puja-lies-in-togetherness/a2.jpg"
+                alt="Durga Puja"
+            </section>
+        </div>
+        <div id="AA">
+            <h1>Author Information</h1>
+            <p>
+                This website was created as a Web Development project
+                to showcase the rich cultural heritage and festivals of India.
+            </p>
+            <address>
+                <strong>Author:</strong> Shaik Nagurbaba <br><br>
+                <strong>Branch:</strong> Computer Science and Engineering<br><br>
+                <strong>Project:</strong> Indian Festivals<br><br>
+                <strong>Topic:</strong> Culture, Traditions and Celebrations
+            </address>
+        </div>
+    </body>
+</html>

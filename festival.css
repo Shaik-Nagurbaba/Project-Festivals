@@ -1,0 +1,34 @@
+*{
+    background-color:rgb(216, 200, 168);
+    color:white;
+    font-size: 18px;
+    border-color: black;
+    border-radius:20px;
+    line-height:30px;
+}
+p{
+    text-indent:50px;
+}
+h1{
+    color:Red;
+    text-align:center;
+    font-size:36px;;
+    padding:10px;
+    margin:20px;
+}
+fieldset{
+    margin:30px 20px 20px 20px;
+    padding:30px;
+}
+fieldset legend{
+    color:blue;
+    font-weight: bold;
+    font-size:20px;
+}
+fieldset ol li b{
+    color:black;
+}
+h2{
+    text-align:center;
+    color:rgb(253, 100, 6)
+}
